@@ -1,0 +1,319 @@
+//Common
+@import 'common/extend.scss';
+@import 'common/mixins.scss';
+@import 'common/variables.scss';
+@import 'common/global.scss';
+
+//layout
+@import 'layouts/main.scss';
+
+// Responsive
+@import 'layouts/responsive.scss';
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  margin-bottom: 0px;
+  font-size: 15px;
+  color: #777;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.bg-red {
+  background-color: $color-red;
+}
+
+.bg-light-purple {
+  background-color: $color-light-purple;
+}
+
+.hover\:bg-red {
+  &:hover {
+    background-color: darken($color-red, 10%);
+  }
+}
+
+.bg-mygray {
+  background-color: $bg-mygray;
+}
+
+%borderRB {
+  padding-bottom: 8px;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    background: $color-red;
+    border-radius: 4px;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+.border-rb-large {
+  @extend %borderRB;
+
+  &:after {
+    height: 5px;
+  }
+}
+
+.border-rb {
+  @extend %borderRB;
+}
+
+.nav-link {
+  @extend %borderRB;
+  opacity: .8;
+
+  &:after {
+    @include single-transition(all, 0.25s, ease-in-out);
+    width: 0;
+  }
+
+  &.active {
+    opacity: 1;
+
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.text-line {
+  border-bottom: solid 2px gainsboro;
+  width: 110px;
+}
+
+.custom-top-left {
+  top: 150px;
+  left: 120px;
+}
+
+.custom-bottom1 {
+  bottom: -55px;
+}
+
+.custom-bottom2 {
+  bottom: -90px;
+}
+
+.input-form {
+  &:focus {
+    border-color: $color-red;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/* The side navigation menu */
+.sidenav {
+  display: none;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+    &:hover {
+      color: #f1f1f1;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
+
+  .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-top: 15px;
+  }
+
+}
+
+
+.owl-theme .owl-nav {
+  position: relative;
+  margin: 32px 0 0;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.owl-dots {
+  margin-top: 0.5rem;
+}
+
+.container {
+
+  .owl-carousel .owl-nav button.owl-next,
+  .owl-carousel .owl-nav button.owl-prev,
+  .owl-carousel button.owl-dot {
+    outline: none;
+    padding: 4px 8px !important;
+    margin: 0;
+    color: black !important;
+    background: transparent !important;
+  }
+
+  .owl-carousel .owl-nav button.owl-next,
+  .owl-carousel .owl-nav button.owl-prev {
+    opacity: .4;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    margin: 0;
+  }
+
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: $color-red;
+  }
+}
+
+@media (min-width: 1024px) {
+  .owl-theme .owl-nav {
+    margin-top: 80px;
+  }
+
+  .owl-dots {
+    position: absolute;
+    bottom: 0;
+    left: 48px;
+    font-size: 28px;
+  }
+}
+
+.bg-image1{
+  background: url("../images/Bg1.svg") bottom no-repeat;
+  background-size: cover;
+}
+
+.bg-image2{
+  background: url("../images/bg2.svg") bottom no-repeat;
+  background-size: cover;
+}
+
+.bg-image3{
+  background: url("../images/Bg3.svg") bottom no-repeat;
+  background-size: cover;
+}
+
+.bg-blue-button{
+  background-color: #4283E4;
+}
+
+.bar-line{
+  height: 8px;
+  background-color: #D38282;
+  width: 0;
+}
+
+
+.identifier1{
+  top: 48%;
+  left: 48%
+}
+
+.identifier1-text{
+  top: 45%;
+  left: 49%
+}
+
+.identifier1:hover + .identifier1-text {
+  display: block;
+}
+
+.identifier2{
+  top: 53%;
+  left: 59%
+}
+
+.identifier2-text{
+  top: 52%;
+  left: 60%
+}
+
+.identifier2:hover + .identifier2-text {
+  display: block;
+}
+
+.identifier3{
+  top: 55%;
+  left: 58%
+}
+
+.identifier3-text{
+  top: 54%;
+  left: 55%
+}
+
+.identifier3:hover + .identifier3-text {
+  display: block;
+}
+
+.identifier4{
+  top: 55%;
+  left: 61%
+}
+
+.identifier4-text{
+  top: 54%;
+  left: 62%
+}
+
+.identifier4:hover + .identifier4-text {
+  display: block;
+}
+
+.identifier5{
+  top: 48%;
+  left: 61%
+}
+
+.identifier5-text{
+  top: 46%;
+  left: 62%
+}
+
+.identifier5:hover + .identifier5-text {
+  display: block;
+}
