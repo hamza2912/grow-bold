@@ -1,0 +1,106 @@
+.owl-theme .owl-nav {
+    position: relative;
+    margin: 32px 0 0;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.owl-dots {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+}
+
+.container {
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+        outline: none;
+        padding: 4px 8px !important;
+        margin: 0;
+        color: black !important;
+        background: transparent !important;
+    }
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev {
+        opacity: .4;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        width: 8px;
+        height: 8px;
+        margin: 0;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background-color: $color-red;
+    }
+}
+
+@media (min-width: 1024px) {
+    .owl-theme .owl-nav {
+        margin-top: 80px;
+    }
+
+    .owl-dots {
+        width: auto;
+        left: 17%;
+    }
+}
+
+.slider-image {
+    background-size: cover;
+    background-position: bottom center;
+
+    &-about {
+        background-image: url("../images/intro/about.jpg")
+    }
+
+    &-covid {
+        background-image: url("../images/intro/covid.jpg")
+    }
+
+    &-africa {
+        background-image: url("../images/intro/africa.jpg")
+    }
+
+    @media (max-width: 768px) {
+        background-size: auto 100%;
+    }
+}
+
+
+.owl-carousel {
+    .owl-item {
+        height: 880px;
+
+        .item {
+            height: 880px;
+        }
+    }
+}
+
+.intro-carousel {
+    color: #FFFEF0;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    outline: none;
+
+    &.active {
+        span {
+            background: white;
+        }
+    }
+
+    span {
+        border: 1px solid white;
+        background: transparent;
+    }
+}

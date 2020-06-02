@@ -1,37 +1,32 @@
 $(document).ready(function () {
-  $('.owl-carousel').owlCarousel({
+  $('.intro-carousel').owlCarousel({
     loop: true,
-    margin: 10,
-    nav: true,
+    margin: 0,
+    nav: false,
     items: 1,
-    navText : ["<i class='far fa-chevron-left'></i>","<i class='far fa-chevron-right'></i>"]
+    autoplay: true,
+    autoplayTimeout: 50000
   })
 
-  var owl = $('.owl-carousel');
-  owl.owlCarousel();
-
+  var introCarousel = $('.intro-carousel');
+  introCarousel.owlCarousel();
 
   function barSwitch(){
-    $( ".bar-line" ).animate({
+    $( ".intro-bar-line" ).animate({
       width: "100%"
-      }, 5000, function() {
-        owl.trigger('next.owl.carousel');
-        $(".bar-line").width('0');
-    });
+      }, 10000);
   }
-  
-  setInterval(function(){barSwitch()});
 
-  $('.owl-prev').on('click', function (e) {
-    $(".bar-line").stop(true, true);
-    $(".bar-line").width('0');
+  barSwitch();
+
+
+  introCarousel.on('changed.owl.carousel', function(event) {
+    $(".intro-bar-line").stop(true, true);
+    $(".intro-bar-line").width('0');
+    barSwitch();
   });
 
-  $('.owl-next').on('click', function (e) {
-    $(".bar-line").stop(true, true);
-    $(".bar-line").width('0');
-  });
-  
+
   $(window).scroll(function() {
     if($(window).scrollTop() > 500) {
       $('.sc-nav').removeClass('lg:bg-transparent');
