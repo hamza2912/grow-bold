@@ -5,7 +5,7 @@ $(document).ready(function () {
     nav: false,
     items: 1,
     autoplay: true,
-    autoplayTimeout: 50000
+    autoplayTimeout: 10000
   })
 
   var introCarousel = $('.intro-carousel');

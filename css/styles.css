@@ -331,11 +331,9 @@ input[type=checkbox]:not(old):checked + label > span:before {
     padding: 50px 25px;
   }
 }
-html {
+html, body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
-}
-
-body {
   font-family: "Raleway", sans-serif;
 }
 
@@ -465,6 +463,24 @@ p {
   .sidenav {
     padding-top: 15px;
   }
+}
+
+.exp-side-image-kenya {
+  background-image: url("../images/experience/kenya.jpg");
+}
+.exp-side-image-workplace {
+  background-image: url("../images/experience/workplace.jpg");
+}
+
+.separator {
+  width: 1px;
+  height: 460px;
+  background-color: #000000;
+  opacity: 0.1;
+}
+
+.bg-blend-soft-light {
+  background-blend-mode: soft-light;
 }
 
 .bg-blue-button {
