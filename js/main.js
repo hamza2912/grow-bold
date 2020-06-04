@@ -23,6 +23,8 @@ $(document).ready(function () {
   introCarousel.on('changed.owl.carousel', function(event) {
     $(".intro-bar-line").stop(true, true);
     $(".intro-bar-line").width('0');
+    introCarousel.trigger('stop.owl.autoplay');
+    introCarousel.trigger('play.owl.autoplay');
     barSwitch();
   });
 

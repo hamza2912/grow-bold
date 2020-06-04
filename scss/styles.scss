@@ -197,33 +197,84 @@ p {
   width: 0;
 }
 
+.ethopia-identifier{
+  top: 47%;
+  left: 61%;
+  z-index: 100;
 
-.identifier1 {
-  top: 48%;
-  left: 48%
+  &-frame {
+    top: 38%;
+    left: 48.5%;
+  
+    &-tip {
+      top: 39%;
+      left: 61%
+    }
+  
+    &-name {
+      top: -20px;
+      left: 40%;
+    }
+  
+    &-text {
+      top: 0;
+      left: 69%
+    }
+  
+    &-link {
+      top: 60px;
+      left: 69%;
+      color: #A8FFFD;
+    }
+  
+  }
 }
 
-.identifier1-text {
-  top: 45%;
-  left: 49%
-}
-
-.identifier1:hover+.identifier1-text {
+.ethopia-identifier:hover+.ethopia-identifier-frame{
   display: block;
 }
+
+.kenya-identifier{
+  top: 48%;
+  left: 48%;
+  z-index: 100;
+
+  &-frame {
+    top: 38.75%;
+    left: 35.65%;
+  
+    &-tip {
+      top: 39%;
+      left: 61%
+    }
+  
+    &-name {
+      top: -20px;
+      left: 43%;
+    }
+  
+    &-text {
+      top: 0;
+      left: 69%
+    }
+  
+    &-link {
+      top: 60px;
+      left: 69%;
+      color: #A8FFFD;
+    }
+  
+  }
+}
+
+.kenya-identifier:hover+.kenya-identifier-frame{
+  display: block;
+}
+
 
 .identifier2 {
   top: 53%;
   left: 59%
-}
-
-.identifier2-text {
-  top: 52%;
-  left: 60%
-}
-
-.identifier2:hover+.identifier2-text {
-  display: block;
 }
 
 .identifier3 {
@@ -231,39 +282,8 @@ p {
   left: 58%
 }
 
-.identifier3-text {
-  top: 54%;
-  left: 55%
-}
-
-.identifier3:hover+.identifier3-text {
-  display: block;
-}
-
 .identifier4 {
   top: 55%;
   left: 61%
 }
 
-.identifier4-text {
-  top: 54%;
-  left: 62%
-}
-
-.identifier4:hover+.identifier4-text {
-  display: block;
-}
-
-.identifier5 {
-  top: 48%;
-  left: 61%
-}
-
-.identifier5-text {
-  top: 46%;
-  left: 62%
-}
-
-.identifier5:hover+.identifier5-text {
-  display: block;
-}
