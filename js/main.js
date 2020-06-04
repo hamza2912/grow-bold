@@ -28,6 +28,28 @@ $(document).ready(function () {
     barSwitch();
   });
 
+  $('#map-ethiopia').on('mouseenter', function(e){
+    const id = $(this).attr('id');
+    console.log(id.substring(4,));
+    e.stopImmediatePropagation();
+    $('.map-identifier').fadeIn();
+    $('.map-identifier-name').text('Ethiopia');
+  })
+
+  $('#map-ethiopia').on('mouseleave', function(e){
+    $('.map-identifier').fadeOut();
+  })
+
+  $('.map-identifier').on('mouseleave', function(e){
+    e.stopImmediatePropagation();
+    $('.map-identifier').fadeOut();
+  });
+
+  $('.map-identifier').on('mouseleave', function(e){
+    $('.ethopia-identifier').show();
+  })
+
+
 
   $(window).scroll(function() {
     if($(window).scrollTop() > 500) {

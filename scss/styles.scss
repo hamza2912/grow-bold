@@ -13,7 +13,7 @@
 
 html,body
 {
-  overflow-x: hidden; 
+  overflow-x: hidden;
   scroll-behavior: smooth;
   font-family: 'Raleway', sans-serif;
 }
@@ -197,7 +197,7 @@ p {
   width: 0;
 }
 
-.ethopia-identifier{
+.map-identifier{
   top: 47%;
   left: 61%;
   z-index: 100;
@@ -205,33 +205,29 @@ p {
   &-frame {
     top: 38%;
     left: 48.5%;
-  
+
     &-tip {
       top: 39%;
       left: 61%
     }
-  
+
     &-name {
       top: -20px;
       left: 40%;
     }
-  
+
     &-text {
       top: 0;
       left: 69%
     }
-  
+
     &-link {
       top: 60px;
       left: 69%;
       color: #A8FFFD;
     }
-  
-  }
-}
 
-.ethopia-identifier:hover+.ethopia-identifier-frame{
-  display: block;
+  }
 }
 
 .kenya-identifier{
@@ -242,28 +238,28 @@ p {
   &-frame {
     top: 38.75%;
     left: 35.65%;
-  
+
     &-tip {
       top: 39%;
       left: 61%
     }
-  
+
     &-name {
       top: -20px;
       left: 43%;
     }
-  
+
     &-text {
       top: 0;
       left: 69%
     }
-  
+
     &-link {
       top: 60px;
       left: 69%;
       color: #A8FFFD;
     }
-  
+
   }
 }
 

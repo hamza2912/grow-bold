@@ -496,35 +496,31 @@ p {
   width: 0;
 }
 
-.ethopia-identifier {
+.map-identifier {
   top: 47%;
   left: 61%;
   z-index: 100;
 }
-.ethopia-identifier-frame {
+.map-identifier-frame {
   top: 38%;
   left: 48.5%;
 }
-.ethopia-identifier-frame-tip {
+.map-identifier-frame-tip {
   top: 39%;
   left: 61%;
 }
-.ethopia-identifier-frame-name {
+.map-identifier-frame-name {
   top: -20px;
   left: 40%;
 }
-.ethopia-identifier-frame-text {
+.map-identifier-frame-text {
   top: 0;
   left: 69%;
 }
-.ethopia-identifier-frame-link {
+.map-identifier-frame-link {
   top: 60px;
   left: 69%;
   color: #A8FFFD;
-}
-
-.ethopia-identifier:hover + .ethopia-identifier-frame {
-  display: block;
 }
 
 .kenya-identifier {
