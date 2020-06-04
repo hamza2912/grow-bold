@@ -58,6 +58,7 @@ p {
     left: 0;
     bottom: 0;
   }
+
 }
 
 .border-rb-large {
@@ -197,89 +198,84 @@ p {
   width: 0;
 }
 
-.map-identifier{
-  top: 47%;
-  left: 61%;
-  z-index: 100;
+.map-identifier-box{
+  width: 250px;
+  height: 100px;
+}
 
-  &-frame {
-    top: 38%;
-    left: 48.5%;
+.identifier{
+    z-index: 100;
 
-    &-tip {
-      top: 39%;
+    &-ethiopia{
+      top: 47%;
+      left: 61%;
+    }
+
+    &-nigeria{
+      top: 48%;
+      left: 48%;
+    }
+
+    &-kenya{
+      top: 55%;
       left: 61%
     }
 
+    &-uganda{
+      top: 53%;
+      left: 59%
+    }
+
+    &-kampala{
+      top: 55%;
+      left: 58%
+    }
+}
+
+.map-identifier {
+
+    &-tip {
+      bottom: 0%;
+      left: 30%
+    }
+
     &-name {
-      top: -20px;
+      top: 0;
+      left: 0%;
+    }
+
+    &-text {
+      bottom: 25px;
+      left: 40%
+    }
+
+    &-link {
+      bottom: 0;
       left: 40%;
-    }
-
-    &-text {
-      top: 0;
-      left: 69%
-    }
-
-    &-link {
-      top: 60px;
-      left: 69%;
       color: #A8FFFD;
     }
-
-  }
 }
 
-.kenya-identifier{
-  top: 48%;
-  left: 48%;
-  z-index: 100;
+.map-tool{
 
-  &-frame {
-    top: 38.75%;
-    left: 35.65%;
-
-    &-tip {
-      top: 39%;
-      left: 61%
+    &-ethiopia{
+      top: 36%;
+      left: 56.5%;
     }
 
-    &-name {
-      top: -20px;
-      left: 43%;
+    &-kenya{
+      top: 44.5%;
+      left: 56.25%;
     }
 
-    &-text {
-      top: 0;
-      left: 69%
+    &-nigeria{
+      top: 37%;
+      left: 43.35%;
     }
-
-    &-link {
-      top: 60px;
-      left: 69%;
-      color: #A8FFFD;
-    }
-
-  }
 }
 
-.kenya-identifier:hover+.kenya-identifier-frame{
-  display: block;
-}
-
-
-.identifier2 {
-  top: 53%;
-  left: 59%
-}
-
-.identifier3 {
-  top: 55%;
-  left: 58%
-}
-
-.identifier4 {
-  top: 55%;
-  left: 61%
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
 }
 

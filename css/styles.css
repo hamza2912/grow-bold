@@ -100,9 +100,6 @@ list-type-ulli {
 .slider-image-covid {
   background-image: url("../images/intro/covid.jpg");
 }
-.slider-image-covid-parallax {
-  background-attachment: fixed;
-}
 .slider-image-africa {
   background-image: url("../images/intro/africa.jpg");
 }
@@ -496,77 +493,69 @@ p {
   width: 0;
 }
 
-.map-identifier {
+.map-identifier-box {
+  width: 250px;
+  height: 100px;
+}
+
+.identifier {
+  z-index: 100;
+}
+.identifier-ethiopia {
   top: 47%;
   left: 61%;
-  z-index: 100;
 }
-.map-identifier-frame {
-  top: 38%;
-  left: 48.5%;
-}
-.map-identifier-frame-tip {
-  top: 39%;
-  left: 61%;
-}
-.map-identifier-frame-name {
-  top: -20px;
-  left: 40%;
-}
-.map-identifier-frame-text {
-  top: 0;
-  left: 69%;
-}
-.map-identifier-frame-link {
-  top: 60px;
-  left: 69%;
-  color: #A8FFFD;
-}
-
-.kenya-identifier {
+.identifier-nigeria {
   top: 48%;
   left: 48%;
-  z-index: 100;
 }
-.kenya-identifier-frame {
-  top: 38.75%;
-  left: 35.65%;
-}
-.kenya-identifier-frame-tip {
-  top: 39%;
+.identifier-kenya {
+  top: 55%;
   left: 61%;
 }
-.kenya-identifier-frame-name {
-  top: -20px;
-  left: 43%;
-}
-.kenya-identifier-frame-text {
-  top: 0;
-  left: 69%;
-}
-.kenya-identifier-frame-link {
-  top: 60px;
-  left: 69%;
-  color: #A8FFFD;
-}
-
-.kenya-identifier:hover + .kenya-identifier-frame {
-  display: block;
-}
-
-.identifier2 {
+.identifier-uganda {
   top: 53%;
   left: 59%;
 }
-
-.identifier3 {
+.identifier-kampala {
   top: 55%;
   left: 58%;
 }
 
-.identifier4 {
-  top: 55%;
-  left: 61%;
+.map-identifier-tip {
+  bottom: 0%;
+  left: 30%;
+}
+.map-identifier-name {
+  top: 0;
+  left: 0%;
+}
+.map-identifier-text {
+  bottom: 25px;
+  left: 40%;
+}
+.map-identifier-link {
+  bottom: 0;
+  left: 40%;
+  color: #A8FFFD;
+}
+
+.map-tool-ethiopia {
+  top: 36%;
+  left: 56.5%;
+}
+.map-tool-kenya {
+  top: 44.5%;
+  left: 56.25%;
+}
+.map-tool-nigeria {
+  top: 37%;
+  left: 43.35%;
+}
+
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
 }
 
 /*# sourceMappingURL=styles.css.map */
