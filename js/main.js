@@ -70,49 +70,51 @@ $(document).ready(function () {
     }
   });
 
+  $('#map-ethiopia, #map-nigeria, #map-kenya, #map-uganda, .identifier-ethiopia, .identifier-nigeria, .identifier-kenya').on('mouseenter', function(e){
+    
+    const map_id = this.id;
 
-  $('#map-ethiopia, .identifier-ethiopia').on('mouseenter', function(e){
-    $('.map-identifier').addClass('map-tool-ethiopia');
-    $('.map-identifier').hide().fadeIn();
-    $('.map-identifier-name').text('Ethiopia');
-    $('.map-identifier-text').text('Interested to know more about your work in Ethiopia');
-    $('.identifier-nigeria, .identifier-kenya, .identifier-uganda, .identifier-kampala').hide();
+    if(map_id == 'map-ethiopia'){
+      $('.map-identifier').addClass('map-loc-ethiopia');
+      $('.map-identifier').hide().fadeIn();
+      $('.map-identifier-name').text('Ethiopia');
+      $('.map-identifier-text').text('Interested to know more about your work in Ethiopia');
+    }
+    else if(map_id == 'map-nigeria'){
+      $('.map-identifier').hide().fadeIn();
+      $('.map-identifier').addClass('map-loc-nigeria');
+      $('.map-identifier-name').text('Nigeria');
+      $('.map-identifier-text').text('Interested to know more about your work in Nigeria');
+    }
+    else if(map_id == 'map-kenya'){
+      $('.map-identifier').hide().fadeIn();
+      $('.map-identifier').addClass('map-loc-kenya');
+      $('.map-identifier-name').text('Kenya');
+      $('.map-identifier-text').text('Interested to know more about your work in Kenya');
+    }
+    else if(map_id == 'map-uganda'){
+      $('.map-identifier').hide().fadeIn();
+      $('.map-identifier').addClass('map-loc-uganda');
+      $('.map-identifier-name').text('Uganda');
+      $('.map-identifier-text').text('Interested to know more about your work in Uganda');
+    }
+    $('.identifier-ethiopia, .identifier-nigeria, .identifier-uganda, .identifier-kampala, .identifier-kenya').hide();
+
   })
 
-  $('#map-ethiopia, .identifier-ethiopia').on('mouseleave', function(e){
-    $('.map-identifier').fadeOut();
-    $('.map-identifier').removeClass('map-tool-ethiopia');
-    $('.identifier-nigeria, .identifier-kenya, .identifier-uganda, .identifier-kampala').show();
-  })
-
-  $('#map-nigeria, .identifier-nigeria').on('mouseenter', function(e){
+  $('#map-ethiopia, #map-nigeria, #map-kenya, #map-uganda').on('mouseleave', function(e){
     e.stopImmediatePropagation();
-    $('.map-identifier').hide().fadeIn();
-    $('.map-identifier').addClass('map-tool-nigeria');
-    $('.map-identifier-name').text('Nigeria');
-    $('.map-identifier-text').text('Interested to know more about your work in Nigeria');
-    $('.identifier-ethiopia, .identifier-kenya, .identifier-uganda, .identifier-kampala').hide();
-  })
-
-  $('#map-nigeria, .identifier-nigeria').on('mouseleave', function(e){
-    $('.map-identifier').fadeOut();
-    $('.map-identifier').removeClass('map-tool-nigeria');
-    $('.identifier-ethiopia, .identifier-kenya, .identifier-uganda, .identifier-kampala').show();
-  })
-
-  $('#map-kenya, .identifier-kenya').on('mouseenter', function(e){
-    e.stopImmediatePropagation();
-    $('.map-identifier').hide().fadeIn();
-    $('.map-identifier').addClass('map-tool-kenya');
-    $('.map-identifier-name').text('Kenya');
-    $('.map-identifier-text').text('Interested to know more about your work in Kenya');
-    $('.identifier-ethiopia, .identifier-nigeria, .identifier-uganda, .identifier-kampala').hide();
-  })
-
-  $('#map-kenya, .identifier-kenya').on('mouseleave', function(e){
-    $('.map-identifier').fadeOut();
-    $('.map-identifier').removeClass('map-tool-kenya');
-    $('.identifier-ethiopia, .identifier-nigeria, .identifier-uganda, .identifier-kampala').show();
+    if($('.map-identifier').is(':hover')){
+      $('.map-identifier').show();
+    }
+    else{
+      $('.map-identifier').fadeOut();
+      $('.map-identifier').removeClass('map-loc-ethiopia');
+      $('.map-identifier').removeClass('map-loc-nigeria');
+      $('.map-identifier').removeClass('map-loc-kenya');
+      $('.map-identifier').removeClass('map-loc-uganda');
+      $('.identifier-ethiopia, .identifier-nigeria, .identifier-kenya, .identifier-uganda, .identifier-kampala').show();
+    }
   })
 
 });

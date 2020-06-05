@@ -553,17 +553,21 @@ p {
   color: #A8FFFD;
 }
 
-.map-tool-ethiopia {
+.map-loc-ethiopia {
   top: 36%;
   left: 56.5%;
 }
-.map-tool-kenya {
-  top: 44.5%;
-  left: 56.25%;
+.map-loc-kenya {
+  top: 43.5%;
+  left: 56%;
 }
-.map-tool-nigeria {
-  top: 37%;
-  left: 43.35%;
+.map-loc-nigeria {
+  top: 36.5%;
+  left: 43%;
+}
+.map-loc-uganda {
+  top: 42%;
+  left: 53.5%;
 }
 
 .parallax-window {

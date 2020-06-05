@@ -270,7 +270,7 @@ p {
     }
 }
 
-.map-tool{
+.map-loc{
 
     &-ethiopia{
       top: 36%;
@@ -278,13 +278,18 @@ p {
     }
 
     &-kenya{
-      top: 44.5%;
-      left: 56.25%;
+      top: 43.5%;
+      left: 56%;
     }
 
     &-nigeria{
-      top: 37%;
-      left: 43.35%;
+      top: 36.5%;
+      left: 43%;
+    }
+
+    &-uganda{
+      top: 42%;
+      left: 53.5%;
     }
 }
 
