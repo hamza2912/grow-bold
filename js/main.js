@@ -19,7 +19,6 @@ $(document).ready(function () {
 
   barSwitch();
 
-
   introCarousel.on('changed.owl.carousel', function(event) {
     $(".intro-bar-line").stop(true, true);
     $(".intro-bar-line").width('0');
@@ -28,7 +27,10 @@ $(document).ready(function () {
     barSwitch();
   });
 
-  $('.parallax-window').parallax({imageSrc: './images/intro/covid.jpg'});
+  $('.covid-parallax').parallax({
+    speed: 0.7,
+    imageSrc: './images/intro/covid.jpg'
+  });
 
   $.fn.pause = function(duration) {
     $(this).animate({ dummy: 1 }, duration);
@@ -68,7 +70,7 @@ $(document).ready(function () {
     }
   });
 
-  
+
   $('#map-ethiopia, .identifier-ethiopia').on('mouseenter', function(e){
     $('.map-identifier').addClass('map-tool-ethiopia');
     $('.map-identifier').hide().fadeIn();
