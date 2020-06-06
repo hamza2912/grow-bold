@@ -45,11 +45,9 @@ $(document).ready(function () {
       $('.nav-link:after').css('background', '#0000');
 
     } else {
-      {
         $('.sc-nav').removeClass('shadow');
         $('.sc-nav').addClass('lg:bg-transparent');
         $('.sc-nav').addClass('lg:text-white');
-    }
     }
   });
 
@@ -70,51 +68,50 @@ $(document).ready(function () {
     }
   });
 
-  $('#map-ethiopia, #map-nigeria, #map-kenya, #map-uganda, .identifier-ethiopia, .identifier-nigeria, .identifier-kenya').on('mouseenter', function(e){
-    
-    const map_id = this.id;
+  let hideMapTooltipVar;
 
-    if(map_id == 'map-ethiopia'){
-      $('.map-identifier').addClass('map-loc-ethiopia');
-      $('.map-identifier').hide().fadeIn();
-      $('.map-identifier-name').text('Ethiopia');
-      $('.map-identifier-text').text('Interested to know more about your work in Ethiopia');
-    }
-    else if(map_id == 'map-nigeria'){
-      $('.map-identifier').hide().fadeIn();
-      $('.map-identifier').addClass('map-loc-nigeria');
-      $('.map-identifier-name').text('Nigeria');
-      $('.map-identifier-text').text('Interested to know more about your work in Nigeria');
-    }
-    else if(map_id == 'map-kenya'){
-      $('.map-identifier').hide().fadeIn();
-      $('.map-identifier').addClass('map-loc-kenya');
-      $('.map-identifier-name').text('Kenya');
-      $('.map-identifier-text').text('Interested to know more about your work in Kenya');
-    }
-    else if(map_id == 'map-uganda'){
-      $('.map-identifier').hide().fadeIn();
-      $('.map-identifier').addClass('map-loc-uganda');
-      $('.map-identifier-name').text('Uganda');
-      $('.map-identifier-text').text('Interested to know more about your work in Uganda');
-    }
-    $('.identifier-ethiopia, .identifier-nigeria, .identifier-uganda, .identifier-kampala, .identifier-kenya').hide();
+  const hideMapTooltip = (() => {
+    console.log('baba');
+    hideMapTooltipVar = setTimeout(function(){
+      $('.map-tooltip').fadeOut();
+    }, 1000);
+  });
 
-  })
+  const stopHideMapTooltip = (() => {
+    console.log('asd');
+    clearTimeout(hideMapTooltipVar);
+  });
 
-  $('#map-ethiopia, #map-nigeria, #map-kenya, #map-uganda').on('mouseleave', function(e){
-    e.stopImmediatePropagation();
-    if($('.map-identifier').is(':hover')){
-      $('.map-identifier').show();
-    }
-    else{
-      $('.map-identifier').fadeOut();
-      $('.map-identifier').removeClass('map-loc-ethiopia');
-      $('.map-identifier').removeClass('map-loc-nigeria');
-      $('.map-identifier').removeClass('map-loc-kenya');
-      $('.map-identifier').removeClass('map-loc-uganda');
-      $('.identifier-ethiopia, .identifier-nigeria, .identifier-kenya, .identifier-uganda, .identifier-kampala').show();
-    }
-  })
+
+  $('.map-path').on('mouseenter', function(e){
+    const countryName = $(this).data('map');
+    const offset = $(this).offset();
+    console.log($(this));
+
+    const width = $(this)[0].getBBox().width;
+    const height = $(this)[0].getBBox().height;
+    const tooltipHeight = $('.map-tooltip').height();
+    const tooltipWidth = $('.map-tooltip').width();
+
+    console.log(tooltipWidth);
+    console.log(height);
+
+    const offsetLeft = offset.left + width/2.4 - 5;
+    const offsetTop = offset.top + height/2.2 - tooltipHeight;
+
+    stopHideMapTooltip();
+    $('.map-tooltip-name').text(countryName);
+    $('.map-tooltip').fadeIn();
+    $('.map-tooltip').css({'top': offsetTop, 'left' : offsetLeft});
+  });
+
+  $('.map-path').on('mouseleave', function(e){
+    hideMapTooltip();
+  });
+
+  $('.map-tooltip').on('mouseenter', function(e){
+    stopHideMapTooltip();
+    $('.map-tooltip').stop( true, true ).fadeIn();
+  });
 
 });

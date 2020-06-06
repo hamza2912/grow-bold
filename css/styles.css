@@ -12,6 +12,61 @@ list-type-ulli {
   padding: 0;
 }
 
+.border-rb, .border-rb-large, .nav-link {
+  padding-bottom: 12px;
+  display: inline-block;
+}
+.border-rb:after, .border-rb-large:after, .nav-link:after {
+  content: "";
+  background: #fff;
+  border-radius: 4px;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.font-semibold {
+  font-weight: 500;
+}
+
+.opacity-64 {
+  opacity: 0.64;
+}
+
+.bg-overlay {
+  position: relative;
+}
+.bg-overlay:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.bg-light-purple {
+  background-color: #F9F3F8;
+}
+
+.bg-gray {
+  background-color: #F7F7F7;
+}
+
 @-webkit-keyframes ltr {
   0% {
     left: -30%;
@@ -92,7 +147,6 @@ list-type-ulli {
 }
 .slider-image {
   background-size: cover;
-  background-position: bottom center;
 }
 .slider-image-about {
   background-image: url("../images/intro/about.jpg");
@@ -129,6 +183,30 @@ list-type-ulli {
 .owl-theme .owl-dots .owl-dot span {
   border: 1px solid white;
   background: transparent;
+}
+
+.nav-link {
+  opacity: 0.8;
+}
+.nav-link:after {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  width: 0;
+}
+.nav-link.active {
+  opacity: 1;
+}
+.nav-link.active:after {
+  width: 100%;
+}
+.nav-link:hover:after {
+  width: 100%;
+}
+
+.sc-nav.shadow .nav-link:after {
+  background: #000;
 }
 
 .signup-content {
@@ -331,86 +409,8 @@ input[type=checkbox]:not(old):checked + label > span:before {
     padding: 50px 25px;
   }
 }
-html, body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  font-family: "Raleway", sans-serif;
-}
-
-p {
-  line-height: 1.7;
-}
-
-.opacity-64 {
-  opacity: 0.64;
-}
-
-.bg-overlay {
-  position: relative;
-}
-.bg-overlay:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.bg-red {
-  background-color: #EC1C24;
-}
-
-.bg-light-purple {
-  background-color: #F9F3F8;
-}
-
-.hover\:bg-red:hover {
-  background-color: #c51017;
-}
-
-.bg-gray {
-  background-color: #F7F7F7;
-}
-
-.nav-link, .border-rb, .border-rb-large {
-  padding-bottom: 12px;
-  display: inline-block;
-}
-.nav-link:after, .border-rb:after, .border-rb-large:after {
-  content: "";
-  background: #fff;
-  border-radius: 4px;
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
 .border-rb-large:after {
   height: 5px;
-}
-
-.nav-link {
-  opacity: 0.8;
-}
-.nav-link:after {
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
-  -o-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  width: 0;
-}
-.nav-link.active {
-  opacity: 1;
-}
-.nav-link.active:after {
-  width: 100%;
-}
-.nav-link:hover:after {
-  width: 100%;
 }
 
 .text-line {
@@ -431,11 +431,6 @@ p {
   bottom: -90px;
 }
 
-.input-form:focus {
-  border-color: #EC1C24;
-}
-
-/*# sourceMappingURL=style.css.map */
 /* The side navigation menu */
 .sidenav {
   display: none;
@@ -504,70 +499,6 @@ p {
   height: 8px;
   background-color: #D38282;
   width: 0;
-}
-
-.map-identifier-box {
-  width: 250px;
-  height: 100px;
-}
-
-.identifier {
-  z-index: 100;
-}
-.identifier-ethiopia {
-  top: 47%;
-  left: 61%;
-}
-.identifier-nigeria {
-  top: 48%;
-  left: 48%;
-}
-.identifier-kenya {
-  top: 55%;
-  left: 61%;
-}
-.identifier-uganda {
-  top: 53%;
-  left: 59%;
-}
-.identifier-kampala {
-  top: 55%;
-  left: 58%;
-}
-
-.map-identifier-tip {
-  bottom: 0%;
-  left: 30%;
-}
-.map-identifier-name {
-  top: 0;
-  left: 0%;
-}
-.map-identifier-text {
-  bottom: 25px;
-  left: 40%;
-}
-.map-identifier-link {
-  bottom: 0;
-  left: 40%;
-  color: #A8FFFD;
-}
-
-.map-loc-ethiopia {
-  top: 36%;
-  left: 56.5%;
-}
-.map-loc-kenya {
-  top: 43.5%;
-  left: 56%;
-}
-.map-loc-nigeria {
-  top: 36.5%;
-  left: 43%;
-}
-.map-loc-uganda {
-  top: 42%;
-  left: 53.5%;
 }
 
 .parallax-window {
