@@ -115,7 +115,7 @@ $(document).ready(function () {
   });
 
   var $select = $('#services_select');
-  $('a[id="service"]').click(function () {
+  $('.service').click(function () {
     $select.val( $(this).data('select') );
 });
 
