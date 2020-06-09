@@ -506,4 +506,16 @@ input[type=checkbox]:not(old):checked + label > span:before {
   background: transparent;
 }
 
+.text-gray {
+  color: #555555;
+}
+
+.text-pale-yellow {
+  color: #FBDC8E;
+}
+
+select:invalid {
+  color: #94999f;
+}
+
 /*# sourceMappingURL=styles.css.map */

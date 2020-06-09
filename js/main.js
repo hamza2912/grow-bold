@@ -114,4 +114,9 @@ $(document).ready(function () {
     $('.map-tooltip').stop( true, true ).fadeIn();
   });
 
+  var $select = $('#services_select');
+  $('a[id="service"]').click(function () {
+    $select.val( $(this).data('select') );
+});
+
 });
