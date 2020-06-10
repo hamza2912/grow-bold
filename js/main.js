@@ -40,14 +40,14 @@ $(document).ready(function () {
   $(window).scroll(function() {
     if($(window).scrollTop() > 500) {
       $('.sc-nav').removeClass('lg:bg-transparent');
-      $('.sc-nav').removeClass('lg:text-white');
+      $('.sc-nav').removeClass('lg:fill-white lg:text-white');
       $('.sc-nav').addClass('shadow');
       $('.nav-link:after').css('background', '#0000');
 
     } else {
         $('.sc-nav').removeClass('shadow');
         $('.sc-nav').addClass('lg:bg-transparent');
-        $('.sc-nav').addClass('lg:text-white');
+        $('.sc-nav').addClass('lg:fill-white lg:text-white');
     }
   });
 
@@ -68,13 +68,28 @@ $(document).ready(function () {
     }
   });
 
+  $('.modal-contact-trigger').on('click', function(){
+    $('.modal-contact').fadeIn('fast');
+  });
+
+  $('.modal-contact__close').on('click', function(){
+    $('.modal-contact').fadeOut('fast');
+  });
+
+  $(document).keydown(function(event) {
+    if (event.keyCode == 27) {
+      $('.modal-contact').fadeOut('fast');
+    }
+  });
+
+
   let hideMapTooltipVar;
 
-  const hideMapTooltip = (() => {
+  const hideMapTooltip = ((time = 200) => {
     console.log('baba');
     hideMapTooltipVar = setTimeout(function(){
       $('.map-tooltip').fadeOut();
-    }, 1000);
+    }, time);
   });
 
   const stopHideMapTooltip = (() => {
@@ -114,8 +129,12 @@ $(document).ready(function () {
     $('.map-tooltip').stop( true, true ).fadeIn();
   });
 
+  $('.map-tooltip').on('mouseleave', function(e){
+    hideMapTooltip(100);
+  });
+
   var $select = $('#services_select');
-  $('.service').click(function () {
+  $('.service-trigger').click(function (e) {
     $select.val( $(this).data('select') );
 });
 

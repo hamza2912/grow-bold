@@ -1,5 +1,10 @@
-
 //end 992px
+@media screen and (min-width: 992px) {
+    .lg\:fill-white {
+        fill: white;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .container {
         width: calc(100% - 40px);

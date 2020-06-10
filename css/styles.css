@@ -14,7 +14,6 @@ list-type-ulli {
 
 .border-rb, .border-rb-large, .nav-link {
   padding-bottom: 12px;
-  display: inline-block;
 }
 .border-rb:after, .border-rb-large:after, .nav-link:after {
   content: "";
@@ -398,6 +397,11 @@ input[type=checkbox]:not(old):checked + label > span:before {
   color: #555;
 }
 
+@media screen and (min-width: 992px) {
+  .lg\:fill-white {
+    fill: white;
+  }
+}
 @media screen and (max-width: 768px) {
   .container {
     width: calc(100% - 40px);
@@ -416,6 +420,12 @@ input[type=checkbox]:not(old):checked + label > span:before {
 .text-line {
   border-bottom: solid 2px gainsboro;
   width: 110px;
+}
+
+.modal > div {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
 }
 
 .custom-top-left {
@@ -514,8 +524,14 @@ input[type=checkbox]:not(old):checked + label > span:before {
   color: #FBDC8E;
 }
 
-select:invalid {
-  color: #94999f;
+select {
+  color: #a0aec0;
+}
+select.selected {
+  color: #000;
+}
+select:valid {
+  color: #000;
 }
 
 /*# sourceMappingURL=styles.css.map */
